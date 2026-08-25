@@ -72,12 +72,41 @@
       "settings": {
         "address": [
           "172.16.0.2/32",
+          "2606:4700:110:864a:5fd6:7e11:9b3:7a46/128"
+        ],
+        "mtu": 1280,
+        "peers": [
+          {
+            "endpoint": "162.159.192.1:2408",
+            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "keepAlive": 5
+          }
+        ],
+        "reserved": [
+          39,
+          63,
+          129
+        ],
+        "secretKey": "B61aXUHwH+5J7GWr3MMEdQ2GPNUaRhlsPr7FLp/kwYg="
+      },
+      "streamSettings": {
+        "sockopt": {
+          "dialerProxy": "proxy"
+        }
+      },
+      "tag": "chain"
+    },
+    {
+      "protocol": "wireguard",
+      "settings": {
+        "address": [
+          "172.16.0.2/32",
           "2606:4700:110:8035:94e2:ef7:d8c3:36bf/128"
         ],
         "mtu": 1280,
         "peers": [
           {
-            "endpoint": "8.47.69.142:928",
+            "endpoint": "162.159.192.168:1843",
             "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
             "keepAlive": 5
           }
@@ -206,7 +235,7 @@
       },
       {
         "network": "tcp,udp",
-        "outboundTag": "proxy",
+        "outboundTag": "chain",
         "type": "field"
       }
     ]
